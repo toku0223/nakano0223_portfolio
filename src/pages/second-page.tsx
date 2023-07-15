@@ -14,9 +14,11 @@ export default function SecondPage({ allData }: { allData: any }) {
   
   const renderUsers = allData.map((data: any, index: number) => (
     <div key={index}>
-      id: {data.id}, name: {data.name}, email: {data.email}
+      <Link href={`/post/${data.id}`}>id: {data.id}, name: {data.name}, email: {data.email}</Link>
     </div>
   ));
+
+  console.log(renderUsers)
   return (
     <>
       <h1>Second Page</h1>

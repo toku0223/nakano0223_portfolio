@@ -37,3 +37,22 @@ export async function getQuiitaData() {
   JSON.stringify(data)
   return data
 }
+
+export async function getQuiitaDataIds() {
+  const res = await axios.get('https://qiita.com/api/v2/items')
+  const data = res.data
+
+  return data.map((d: UserType) => {
+    return {
+      params: {
+        id: d.id.toString()
+      }
+    }
+  })
+}
+
+export async function getQuiitaPagesDataByIds(id: string[]) {
+  const res = await axios.get(`https://qiita.com/api/v2/items/${id}`)
+  const data = res.data
+  return convertJson(data)
+}

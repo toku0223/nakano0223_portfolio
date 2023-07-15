@@ -5,7 +5,9 @@ export default function BlogPage(){
     <>
       <h1>Blog Page</h1>
 
-      <Link href="/first-page">blog-pageへ移動</Link>
+      <Link href="/first-page">first-pageへ移動</Link><br />
+      <Link href="/second-page">second-pageへ移動</Link><br />
+      <Link href="/third-page">third-pageへ移動</Link><br />
     </>
   )
   }
