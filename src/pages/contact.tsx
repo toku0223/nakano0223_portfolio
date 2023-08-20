@@ -48,7 +48,7 @@ export default function contact() {
             type="name"
             id="name"
             value={name}
-            className="page4_input"
+            className="contact_input"
             placeholder="例：山田 太郎"
             required
             onChange={(e) => setName(e.target.value)}

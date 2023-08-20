@@ -33,3 +33,7 @@
 .contact_label {
   @apply text-right mt-1 px-4 text-lg font-medium;
 }
+
+.contact_input {
+  @apply border-solid border-black;
+}
