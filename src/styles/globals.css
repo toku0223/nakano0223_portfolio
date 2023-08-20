@@ -35,5 +35,5 @@
 }
 
 .contact_input {
-  @apply border-solid border-black;
+  @apply border border-black pl-1 py-0;
 }

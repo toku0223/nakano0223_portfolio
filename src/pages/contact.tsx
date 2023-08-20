@@ -48,7 +48,7 @@ export default function contact() {
             type="name"
             id="name"
             value={name}
-            className="contact_input"
+            className="contact_input py-2"
             placeholder="例：山田 太郎"
             required
             onChange={(e) => setName(e.target.value)}
@@ -66,7 +66,7 @@ export default function contact() {
             type="email"
             id="email"
             value={email}
-            className="page4_input"
+            className="contact_input"
             placeholder="xxxxxxxx@xxx.xx"
             required
             onChange={(e) => setEmail(e.target.value)}
@@ -84,7 +84,7 @@ export default function contact() {
             type="subject"
             id="subject"
             value={subject}
-            className="page4_input"
+            className="contact_input"
             placeholder="タイトル"
             required
             onChange={(e) => setSubject(e.target.value)}
@@ -101,7 +101,7 @@ export default function contact() {
           <textarea
             id="message"
             value={message}
-            className="page4_input"
+            className="contact_input"
             placeholder="本文"
             required
             onChange={(e) => setMessage(e.target.value)}
