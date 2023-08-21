@@ -32,8 +32,8 @@ export const mailSystem = async (
   console.log('firebase start')
   try {
     const docRef = await addDoc(collection(db, "mail"), {
-      to: 'info@ktectoyonaka.com',
-      from: `Ktec Contact Form<${email}>`,
+      to: 'kei.nakanotoku@gmail.com',
+      from: `Nakano Web Contact Form<${email}>`,
       message: {
         subject: 'HPでお客様よりお問い合わせがありました。',
         html: `お名前：${name}<br />

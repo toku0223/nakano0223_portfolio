@@ -21,6 +21,12 @@
 
 /* contact */
 
+.contact_h2 {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #2f4f4f;
+}
+
 .contact_align {
   @apply mx-auto flex flex-col;
   width: 80%;
@@ -36,4 +42,8 @@
 
 .contact_input {
   @apply border border-black pl-1 py-0;
+}
+
+.contact_line_img {
+  width: 14vw;
 }

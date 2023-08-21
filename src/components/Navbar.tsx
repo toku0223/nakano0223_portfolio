@@ -57,8 +57,8 @@ const Header = () => {
       }}
       className={
         isTop
-          ? 'md:bg-opacity-50 items-center justify-between font-semibold fixed w-full flex navbar navbar-expand-lg navbar-light z-20'
-          : 'items-center justify-between font-semibold fixed w-full flex navbar navbar-expand-lg navbar-light z-20'
+          ? 'md:bg-opacity-50 items-center justify-between font-semibold fixed w-full flex navbar navbar-expand-lg navbar-light z-20 '
+          : 'items-center justify-between font-semibold fixed w-full flex navbar navbar-expand-lg navbar-light z-20 '
       }
     >
       <nav className="pcnav_hidden w-full">

@@ -1,8 +1,11 @@
+import Layout from '@/components/Layout';
 
 const portfolio = () => {
   return (
-    <div>portfolio</div>
-  )
-}
+    <Layout>
+      <div>portfolio</div>
+    </Layout>
+  );
+};
 
-export default portfolio
+export default portfolio;

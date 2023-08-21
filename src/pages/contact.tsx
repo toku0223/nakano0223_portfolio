@@ -27,10 +27,8 @@ export default function contact() {
 
   return (
     <Layout>
-      <div className="head_div"></div>
-
-      <div className="text-black flex flex-col items-center mb-6">
-        <h2 className="page1_top_h2">CONTACT</h2>
+      <div className="text-black flex flex-col items-center mb-12">
+        <h2 className="contact_h2">CONTACT</h2>
         <h3 className="page1_top_h3">お問い合わせ</h3>
       </div>
 
@@ -117,6 +115,21 @@ export default function contact() {
             {error}
           </div>
         </div>
+      </div>
+      <div className="flex flex-col items-center text-center mt-16">
+        <h2>
+          LINEからもご相談を承っております。
+          <br />
+          公式LINEはコチラ
+        </h2>
+        <h2 className="contact_h2">Nakano Web</h2>
+        <a href="https://lin.ee/naSUwaO">
+          <img
+            className="contact_line_img"
+            src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png"
+            alt="友だち追加"
+          />
+        </a>
       </div>
 
       {/* <div className="page4_tel w-full py-12 mt-12 text-white flex flex-col items-center">
