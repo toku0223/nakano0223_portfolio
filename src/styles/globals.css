@@ -19,6 +19,13 @@
   height: 6vw;
 }
 
+/* portfolio */
+
+.Example_grid {
+  @apply grid gap-x-10 gap-y-6 sm:grid-cols-2 md:gap-x-20 lg:grid-cols-2 xl:grid-cols-2;
+  width: 100%;
+}
+
 /* contact */
 
 .contact_h2 {

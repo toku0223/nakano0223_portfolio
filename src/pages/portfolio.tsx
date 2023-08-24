@@ -1,9 +1,10 @@
+import ConstCardcopy from '@/components/ConstCardcopy';
 import Layout from '@/components/Layout';
 
 const portfolio = () => {
   return (
     <Layout>
-      <div>portfolio</div>
+      <ConstCardcopy />
     </Layout>
   );
 };

@@ -16,12 +16,7 @@ export const testFunc = async () => {
         "equals": false
       }
     },
-    sorts: [
-      {
-        property: 'date',
-        direction: 'descending',
-      },
-    ],
+    
   });
 };
 
