@@ -7,7 +7,8 @@ export default async function handler(
   res: NextApiResponse<any>
 ) {
   const result = await testFunc();
-  console.log('🚀 ~ file: hello.ts:14 ~ result:', result);
-  res.status(200).json({ data: result });
+  const data = result.results
+  
+  res.status(200).json({ data});
 }
 

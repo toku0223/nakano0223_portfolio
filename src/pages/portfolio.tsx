@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 const portfolio = () => {
   return (
     <Layout>
-      <ConstCardcopy />
+      <ConstCardcopy allData={undefined} />
     </Layout>
   );
 };
