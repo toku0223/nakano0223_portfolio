@@ -1,10 +1,9 @@
-import { getQuiitaDataIds, getQuiitaPagesDataByIds } from '@/lib/getAPIData';
+import { getQiitaDataIds, getQiitaPagesDataByIds } from '@/lib/getAPIData';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-
 export async function getStaticPaths() {
-  const paths = await getQuiitaDataIds();
+  const paths = await getQiitaDataIds();
   return {
     paths,
     fallback: false,
@@ -12,7 +11,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { id: string[] } }) {
-  const userData = await getQuiitaPagesDataByIds(params.id);
+  const userData = await getQiitaPagesDataByIds(params.id);
   return {
     props: {
       userData,
@@ -28,7 +27,9 @@ export default function Quiita({ userData }: { userData: any }) {
   return user ? (
     <div>
       <h1>{user.title}</h1>
-      <Link href={user.url}><p>{user.url}</p></Link>
+      <Link href={user.url}>
+        <p>{user.url}</p>
+      </Link>
     </div>
   ) : null;
 }

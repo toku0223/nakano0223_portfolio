@@ -1,10 +1,18 @@
-import { testFunc } from '@/utils';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { getAPIData } from '@/lib/getAPIData';
+import { useState } from 'react';
+
+// export async function getStaticProps() {
+//   const allData = await getPortfolioData();
+//   console.log(allData);
+//   return {
+//     props: {
+//       allData,
+//     },
+//   };
+// }
 
 export async function getStaticProps() {
-  const allData = await testFunc();
-  console.log(allData);
+  const allData = await getAPIData();
   return {
     props: {
       allData,
@@ -12,22 +20,29 @@ export async function getStaticProps() {
   };
 }
 
-const ConstCardcopy = ({ allData }: { allData: any }) => {
+export default function ConstCardcopy({ allData }: { allData: any }) {
   const [mapdata, setMapdata] = useState([]);
   const [addressdata, setAddressdata] = useState([]);
   // console.log('🚀 ~ file: example.tsx:10 ~ example ~ setMapdata:', setMapdata);
-
+  // const renderUsers = allData.map((data: any, index: number) => (
+  //   <div key={index}>
+  //     <Link href={`/post/${data.id}`}>
+  //       id: {data.id}, name: {data.name}, email: {data.email}
+  //     </Link>
+  //   </div>
+  // ));
+  // console.log(renderUsers);
   console.log(allData);
-  useEffect(() => {
-    console.log('🚀 ~ file: index.tsx:8 ~ useEffect ~ useEffect:', allData);
-    handleClick();
-  }, []);
+  // useEffect(() => {
+  //   console.log('🚀 ~ file: index.tsx:8 ~ useEffect ~ useEffect:', allData);
+  //   handleClick();
+  // }, []);
 
-  const handleClick = async () => {
-    const res = await axios.get('/api/hello');
-    console.log(res.data.data.results);
-    setMapdata(res.data.data.results);
-  };
+  // const handleClick = async () => {
+  //   const res = await axios.get('/api/hello');
+  //   console.log(res.data.data.results);
+  //   setMapdata(res.data.data.results);
+  // };
   // useEffect(() => {
   //   console.log('🚀 ~ file: index.tsx:8 ~ useEffect ~ useEffect:', '***');
   //   buildClick();
@@ -76,6 +91,4 @@ const ConstCardcopy = ({ allData }: { allData: any }) => {
       </div> */}
     </div>
   );
-};
-
-export default ConstCardcopy;
+}
