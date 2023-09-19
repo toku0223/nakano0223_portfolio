@@ -58,8 +58,8 @@ const portfolio = ({ pages }: { pages: any }) => {
                               ? md.properties.image.files[0].file.url
                               : ''
                           }
-                          alt="Photo"
-                          className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                          alt={md.properties.name.title[0].plain_text}
+                          className="h-full w-full object-cover object-center transition duration-100 group-hover:scale-110"
                           width={400}
                           height={300}
                         />
