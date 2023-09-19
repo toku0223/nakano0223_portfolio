@@ -1,4 +1,4 @@
-import { formatDateToKanji } from '@/utils';
+import { formatDateToKanji } from '@/utils/notion';
 import axios from 'axios';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';

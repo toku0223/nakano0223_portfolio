@@ -58,8 +58,15 @@ export async function getQiitaPagesDataByIds(id: string[]) {
 }
 
 export async function getPortfolioData() {
-  const res = await axios.get('/api/hello');
-  const data = res.data 
-  JSON.stringify(data)
-  return data
-}
+  try {const res = await axios.get('/api/hello');
+    const data = res.data
+    JSON.stringify(data)
+    console.log(data)
+    return { props: { data } }
+    
+  } catch (error) {
+    console.log(error)
+    
+  }
+    
+  }

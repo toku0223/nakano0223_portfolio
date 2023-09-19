@@ -3,19 +3,21 @@ import { Client } from '@notionhq/client';
 const notion = new Client({ auth: process.env.NEXT_PUBLIC_NOTION_KEY as string });
 const DATABASE_ID = process.env.NEXT_PUBLIC_NOTION_DATABASE_ID as string;
 
-export const testFunc = async () => {
+export const testFunc = async ({
+  name,
+  tag,
+  URL,
+}:
+  {
+    name?: string;
+    tag?: string;
+    URL?: string;
+  }) => {
 
-  console.log(notion)
-
+console.log("test",DATABASE_ID)
   return await notion.databases.query({
     database_id: DATABASE_ID,
-    filter: {
-
-      "property": "checkbox",
-      "checkbox": {
-        "equals": false
-      }
-    },
+    
     
   });
 };

@@ -1,14 +1,17 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { testFunc } from '@/utils';
+import { testFunc } from '@/utils/notion';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  const result = await testFunc();
-  const data = result.results
-  
-  res.status(200).json({ data});
+  try {
+    const result = await testFunc({});
+ 
+  } catch (error) {
+    console.log(error)
+  }  
+  res.status(200).json({test:""});
 }
 
