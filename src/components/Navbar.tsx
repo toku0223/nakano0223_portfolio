@@ -85,22 +85,22 @@ const Header = () => {
               </li>
               <li>
                 <a
-                  href="/contact"
-                  className="font-semibold py-2 px-3 md:bg-transparent 
-          md:p-0"
-                  aria-current="page"
-                >
-                  CONTACT
-                </a>
-              </li>
-              <li>
-                <a
                   href="/portfolio"
                   className="font-semibold py-2 px-3 md:bg-transparent 
           md:p-0"
                   aria-current="page"
                 >
                   PORTFORIO
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="font-semibold py-2 px-3 md:bg-transparent 
+          md:p-0"
+                  aria-current="page"
+                >
+                  CONTACT
                 </a>
               </li>{' '}
             </ul>
