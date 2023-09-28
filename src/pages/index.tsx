@@ -8,6 +8,7 @@ export default function Home() {
   return (
     <Layout>
       <SeoHead title="nakano Web制作Portfolio" />
+      <h1></h1>
     </Layout>
   );
 }
