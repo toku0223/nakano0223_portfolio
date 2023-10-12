@@ -17,8 +17,6 @@ export const testFunc = async ({
 console.log("test",DATABASE_ID)
   return await notion.databases.query({
     database_id: DATABASE_ID,
-    
-    
   });
 };
 

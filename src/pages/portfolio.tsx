@@ -29,14 +29,6 @@ const portfolio = ({ pages }: { pages: any }) => {
   const handleClick = async () => {
     setMapdata(pages);
   };
-  // useEffect(() => {
-  //   console.log('🚀 ~ file: index.tsx:8 ~ useEffect ~ useEffect:', '***');
-  //   buildClick();
-  // }, []);
-
-  // const buildClick = async () => {
-  //   setMapdata(allData.data.data.results);
-  // };
 
   return (
     <Layout>
@@ -44,36 +36,38 @@ const portfolio = ({ pages }: { pages: any }) => {
         <div className="mx-auto md:max-w-screen-md lg:max-w-screen-lg px-4 md:px-1">
           <div className="Example_grid">
             {mapdata.length !== 0 &&
-              mapdata.map((md: any, index: number) => {
-                return md.properties.name.title[0].plain_text.length !== 0 ? (
-                  <div key={index}>
-                    <div>
-                      <a
-                        href={md.properties.URL.url}
-                        className="group mb-2 block h-60 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
-                      >
-                        <Image
-                          src={
-                            md.properties.image.files.length !== 0
-                              ? md.properties.image.files[0].file.url
-                              : ''
-                          }
-                          alt={md.properties.name.title[0].plain_text}
-                          className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
-                          width={400}
-                          height={300}
-                        />
-                      </a>
+              mapdata
+                .filter((md: any, index: number) => index < 2)
+                .map((md: any, index: number) => {
+                  return md.properties.name.title[0].plain_text.length !== 0 ? (
+                    <div key={index}>
+                      <div>
+                        <a
+                          href={md.properties.URL.url}
+                          className="group mb-2 block h-60 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:mb-3"
+                        >
+                          <Image
+                            src={
+                              md.properties.image.files.length !== 0
+                                ? md.properties.image.files[0].file.url
+                                : ''
+                            }
+                            alt={md.properties.name.title[0].plain_text}
+                            className="h-full w-full object-cover object-center transition duration-200 group-hover:scale-110"
+                            width={400}
+                            height={300}
+                          />
+                        </a>
 
-                      <div className="flex flex-col text-center">
-                        <span className="text-lg font-bold text-gray-500">
-                          {md.properties.name.title[0].plain_text} 様
-                        </span>
+                        <div className="flex flex-col text-center">
+                          <span className="text-lg font-bold text-gray-500">
+                            {md.properties.name.title[0].plain_text} 様
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ) : null;
-              })}
+                  ) : null;
+                })}
           </div>
         </div>
       </div>
