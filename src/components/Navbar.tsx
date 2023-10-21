@@ -90,7 +90,7 @@ const Header = () => {
           md:p-0"
                   aria-current="page"
                 >
-                  PORTFORIO
+                  PORTFOLIO
                 </a>
               </li>
               <li>

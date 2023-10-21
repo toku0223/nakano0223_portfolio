@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* common */
+
+.t_color_g {
+  color: #2f4f4f;
+}
+
 /* Navbar */
 .headlogo {
   width: 10vw;
@@ -17,6 +23,67 @@
 
 .head_div {
   height: 6vw;
+}
+
+/* home */
+
+.slide_logo {
+  @apply bg-white;
+  height: 100px;
+  width: 100vw;
+}
+
+.title_h2 {
+  @apply text-center font-bold text-2xl;
+  color: #2f4f4f;
+}
+
+.slide_img {
+  @apply mt-2 grid gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 animate-fade-in-bck;
+  width: 100%;
+}
+
+/* loop animation */
+.loop_wrap {
+  display: flex;
+  width: 200vw;
+  height: 400px;
+  overflow: hidden;
+}
+
+.loop_wrap img {
+  width: auto;
+  height: 100%;
+}
+
+.loop_wrap:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-150%);
+  }
+}
+
+.loop_wrap img:first-child {
+  animation: loop 50s -25s linear infinite;
+}
+
+.loop_wrap img:last-child {
+  animation: loop2 50s linear infinite;
 }
 
 /* portfolio */

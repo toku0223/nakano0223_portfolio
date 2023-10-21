@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       animation: {
         "slide-in-bottom": "slide-in-bottom 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) 3s   ",
-        "fade-in-bck": "fade-in-bck 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s  both"
+        "fade-in-bck": "fade-in-bck 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s  both",
+        "fade-in-top_text": "fade-in-bck 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s  both"
       },
       keyframes: {
         "slide-in-bottom": {

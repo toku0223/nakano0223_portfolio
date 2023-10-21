@@ -8,7 +8,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className="relative overflow-hidden">
       {/* <div className="flex flex-col items-center max-w-2xl w-full mx-auto"> */}
       <Navbar />
-      <main className="w-full pt-20 pb-12">{children}</main>
+      <main className="w-full pt-12 pb-12">{children}</main>
       <Footer />
       {/* </div> */}
     </div>

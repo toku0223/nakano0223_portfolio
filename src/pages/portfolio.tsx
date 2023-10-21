@@ -32,6 +32,10 @@ const portfolio = ({ pages }: { pages: any }) => {
 
   return (
     <Layout>
+      <div className="text-black flex flex-col items-center mb-12">
+        <h2 className="contact_h2">PORTFOLIO</h2>
+        <h3 className="page1_top_h3">制作実績</h3>
+      </div>
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="mx-auto md:max-w-screen-md lg:max-w-screen-lg px-4 md:px-1">
           <div className="Example_grid">
